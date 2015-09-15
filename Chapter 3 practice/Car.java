@@ -19,8 +19,8 @@ public class Car
      */
     public Car(double fuelEfficiency)
     {
-        fuelEfficiency = fuelEfficiency;
-        fuelInTank = 0;
+        this.fuelEfficiency = fuelEfficiency;
+        this.fuelInTank = 0;
     }
 
     /**
