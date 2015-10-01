@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import java.util.Scanner;
 
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
@@ -26,8 +27,9 @@ public class CityscapeViewer
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
-        
-        
+        Scanner s = new Scanner(System.in);
+        System.out.print("How many floors is there to the building? ");
+        int floors = s.nextInt();
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
         CityscapeComponent component = new CityscapeComponent( /* pass the user-specified value */ );
