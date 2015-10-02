@@ -1,4 +1,5 @@
 import java.awt.Graphics2D;
+import java.awt.geom.Rectangle2D;
 
 /**
  * Write a description of class Building here.
@@ -9,20 +10,20 @@ import java.awt.Graphics2D;
 public class Building
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private int allfloors;
     private int xLeft;
     private int yTop;
 
     /**
      * Default constructor for objects of class Building
      */
-    public Building(int floors, int x, int y)
+    public Building(int x, int y)
     {
        xLeft = x;
        yTop = y;
-       allfloors = floors;
+       
     }
-    
+    
+
     /**
      * An example of a method - replace this comment with your own
      *  that describes the operation of the method
@@ -36,7 +37,8 @@ public class Building
      */
     public void draw(Graphics2D g2)
     {
-        
+        Rectangle2D.Double body = new Rectangle2D.Double(100,300,150, 600);
+        g2.draw(body);
     }
 
     

@@ -1,6 +1,6 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
-
+import java.awt.Rectangle;
 /**
  * Write a description of class Bridge here.
  * 

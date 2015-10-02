@@ -31,7 +31,7 @@ public class CityscapeComponent extends JComponent
         
         // invoke the draw method on each object in your Cityscape
         // ...
-        Building building = new Building(50,50);
+        Building building = new Building(100,75);
         
         building.draw(g2);
         

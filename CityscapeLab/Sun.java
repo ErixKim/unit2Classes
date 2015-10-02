@@ -34,6 +34,7 @@ public class Sun
      */
     public void draw(Graphics2D g2)
     {
-        Ellipse2D.Double outerRing = new Ellipse.Double(xLeft, yTop + 10, 60, 10);
+        Ellipse2D.Double Sun = new Ellipse2D.Double(200, 150, 60, 10);
+        g2.draw(Sun);
     }
 }
