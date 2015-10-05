@@ -1,6 +1,7 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
-
+import java.awt.Color;
+import java.awt.Rectangle;
 /**
  * Write a description of class Building here.
  * 
@@ -16,10 +17,9 @@ public class Building
     /**
      * Default constructor for objects of class Building
      */
-    public Building(int x, int y)
+    public Building()
     {
-       xLeft = x;
-       yTop = y;
+      
        
     }
     
@@ -38,6 +38,8 @@ public class Building
     public void draw(Graphics2D g2)
     {
         Rectangle2D.Double body = new Rectangle2D.Double(100,300,150, 600);
+        g2.setColor(Color.green);
+        g2.fill(body);
         g2.draw(body);
     }
 

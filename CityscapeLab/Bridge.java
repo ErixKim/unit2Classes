@@ -1,6 +1,12 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.Rectangle;
+import java.awt.geom.Arc2D;
+import java.awt.geom.Rectangle2D;
+import java.awt.Color;
+import java.awt.geom.Line2D;
+import java.awt.*;
+import javax.swing.*;
 /**
  * Write a description of class Bridge here.
  * 
@@ -16,10 +22,10 @@ public class Bridge
     /**
      * Default constructor for objects of class Bridge
      */
-    public Bridge(int x, int y)
+    public Bridge()
     {
-        xLeft = x;
-        yTop = y;
+        
+        
     }
     
     /**
@@ -35,6 +41,14 @@ public class Bridge
      */
     public void draw(Graphics2D g2)
     {
-        
+        Rectangle2D.Double platform = new Rectangle2D.Double(300,300,600, 60);
+        g2.setColor(Color.lightGray);
+        g2.fill(platform);
+        g2.setStroke(new BasicStroke(10));
+        g2.draw(new Line2D.Float(400, 0, -20, 500));
+        //*Arc2D.Double bridge = new Arc2D.Double(50 , 50 , 100,100,0,180);
+        //*g2.setColor(Color.yellow);
+        //*g2.fill(bridge);
+       
     }
 }

@@ -13,8 +13,9 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    
-    
+    private Building building;
+    private Sun sun;
+    private Bridge tree;
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
@@ -31,15 +32,15 @@ public class CityscapeComponent extends JComponent
         
         // invoke the draw method on each object in your Cityscape
         // ...
-        Building building = new Building(100,75);
+        Building building = new Building();
         
         building.draw(g2);
         
-        Sun sun = new Sun(100,25);
+        Sun sun = new Sun();
         
         sun.draw(g2);
         
-        Bridge bridge = new Bridge(100,150);
+        Bridge bridge = new Bridge();
         
         bridge.draw(g2);
     }

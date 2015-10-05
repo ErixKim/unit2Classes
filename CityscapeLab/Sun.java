@@ -1,5 +1,6 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
+import java.awt.Color;
 
 /**
  * Write a description of class Sun here.
@@ -16,10 +17,9 @@ public class Sun
     /**
      * Default constructor for objects of class Sun
      */
-    public Sun(int x, int y)
+    public Sun()
     {
-        xLeft = x;
-        yTop = y;
+       
     }
     /**
      * An example of a method - replace this comment with your own
@@ -34,7 +34,9 @@ public class Sun
      */
     public void draw(Graphics2D g2)
     {
-        Ellipse2D.Double Sun = new Ellipse2D.Double(200, 150, 60, 10);
+        Ellipse2D.Double Sun = new Ellipse2D.Double(650, -50, 200, 200);
+        g2.setColor(Color.yellow);
+        g2.fill(Sun);
         g2.draw(Sun);
     }
 }
