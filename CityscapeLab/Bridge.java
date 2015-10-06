@@ -41,11 +41,18 @@ public class Bridge
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle2D.Double platform = new Rectangle2D.Double(300,300,600, 60);
+        //Rectangle2D.Double platform = new Rectangle2D.Double(10,50,200, 150);
+        //g2.setColor(Color.blue);
+        //g2.fill(platform);
+        //g2.setColor(Color.blue);
+        //g2.setStroke(new BasicStroke(70));
+        //g2.draw(new Line2D.Float(850,-20,-20,500));
         g2.setColor(Color.lightGray);
-        g2.fill(platform);
-        g2.setStroke(new BasicStroke(10));
-        g2.draw(new Line2D.Float(400, 0, -20, 500));
+        g2.setStroke(new BasicStroke(30));
+        g2.draw(new Line2D.Float(850, -20, -1, 500));
+        g2.setColor(Color.orange);
+        g2.setStroke(new BasicStroke(5));
+        g2.draw(new Line2D.Float(850, -20, -1, 500));
         //*Arc2D.Double bridge = new Arc2D.Double(50 , 50 , 100,100,0,180);
         //*g2.setColor(Color.yellow);
         //*g2.fill(bridge);

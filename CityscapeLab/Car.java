@@ -1,29 +1,31 @@
 import java.awt.Graphics2D;
+import java.awt.geom.Ellipse2D;
+import java.awt.Rectangle;
+import java.awt.geom.Arc2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.Color;
-import java.awt.Rectangle;
+import java.awt.geom.Line2D;
+import java.awt.*;
+import javax.swing.*;
+
 /**
- * Write a description of class Building here.
+ * Write a description of class Car here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Building
+public class Car
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private int xLeft;
-    private int yTop;
-
-    /**
-     * Default constructor for objects of class Building
-     */
-    public Building()
-    {
-      
-       
-    }
     
-
+    /**
+     * Default constructor for objects of class Car
+     */
+    public Car()
+    {
+        
+    }
+    
     /**
      * An example of a method - replace this comment with your own
      *  that describes the operation of the method
@@ -37,24 +39,13 @@ public class Building
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle2D.Double body = new Rectangle2D.Double(350,350,150, 250);
-        g2.setColor(Color.lightGray);
-        g2.fill(body);
-        g2.draw(body);
-        Rectangle2D.Double body1 = new Rectangle2D.Double(500,300,150, 300);
+        g2.setStroke(new BasicStroke(30));
+        g2.setColor(Color.yellow);
+        g2.draw(new Line2D.Float(200, -20, -20, 10));
+        Ellipse2D.Double carwheels = new Ellipse2D.Double(50, -50, 50, 50);
         g2.setColor(Color.black);
-        g2.fill(body1);
-        g2.draw(body1);
-        
-        g2.setColor(Color.green);
-        int x = 0;
-        for(int i=1; i<50; i++){
-            Rectangle2D.Double grass = new Rectangle2D.Double(x,530,10, 50);
-            g2.fill(grass);
-            g2.draw(grass);
-            x += 30;
-        }
+        g2.fill(carwheels);
+        g2.draw(carwheels);
     }
 
-    
 }
