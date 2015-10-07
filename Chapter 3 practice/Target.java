@@ -25,7 +25,8 @@ public class Target
         xLeft = x;
         yTop = y;
     }
-    
+    
+
     /**
      * An example of a method - replace this comment with your own
      *  that describes the operation of the method
@@ -39,7 +40,7 @@ public class Target
      */
     public void draw(Graphics2D g2)
     {
-        Ellipse2D.Double outerRing = new Ellipse.Double(xLeft, yTop + 10, 60, 10);
+        Ellipse2D.Double outerRing = new Ellipse2D.Double(xLeft, yTop + 10, 60, 10);
        
     }
 
