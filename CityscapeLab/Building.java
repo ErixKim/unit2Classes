@@ -11,15 +11,15 @@ import java.awt.Rectangle;
 public class Building
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private int xLeft;
-    private int yTop;
-
+   
+    public int floors;
     /**
      * Default constructor for objects of class Building
      */
-    public Building()
+    public Building(int floors)
     {
-      
+       this.floors = floors;
+       
        
     }
     
@@ -37,7 +37,7 @@ public class Building
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle2D.Double body = new Rectangle2D.Double(350,350,150, 250);
+        Rectangle2D.Double body = new Rectangle2D.Double(350,600 - (floors * 10),145, floors * 50);
         g2.setColor(Color.lightGray);
         g2.fill(body);
         g2.draw(body);
@@ -46,13 +46,21 @@ public class Building
         g2.fill(body1);
         g2.draw(body1);
         
-        g2.setColor(Color.green);
+        
         int x = 0;
+        int y = 0;
         for(int i=1; i<50; i++){
+            g2.setColor(Color.green);
             Rectangle2D.Double grass = new Rectangle2D.Double(x,530,10, 50);
             g2.fill(grass);
             g2.draw(grass);
             x += 30;
+            y += 1;
+            g2.setColor(Color.black);
+            Rectangle2D.Double floorboundary = new Rectangle2D.Double(350,600 - (floors * 10) + (floors * y) , 145 , 3);
+            g2.fill(floorboundary);
+            g2.draw(floorboundary);
+            
         }
     }
 

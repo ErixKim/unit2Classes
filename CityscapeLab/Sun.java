@@ -38,5 +38,6 @@ public class Sun
         g2.setColor(Color.yellow);
         g2.fill(Sun);
         g2.draw(Sun);
+        
     }
 }
