@@ -11,15 +11,13 @@ import java.awt.Color;
 public class Sun
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private int xLeft;
-    private int yTop;
-
+    public String time;
     /**
      * Default constructor for objects of class Sun
      */
-    public Sun()
+    public Sun(String time)
     {
-       
+       this.time = time;
     }
     /**
      * An example of a method - replace this comment with your own
@@ -34,10 +32,14 @@ public class Sun
      */
     public void draw(Graphics2D g2)
     {
-        Ellipse2D.Double Sun = new Ellipse2D.Double(650, -50, 200, 200);
-        g2.setColor(Color.yellow);
-        g2.fill(Sun);
-        g2.draw(Sun);
         
+        if (time.equals("y"))
+        {
+            Ellipse2D.Double sun = new Ellipse2D.Double(650, -50, 200, 200);
+            g2.setColor(Color.yellow);
+            g2.fill(sun);
+            g2.draw(sun);
+        }
+    
     }
 }

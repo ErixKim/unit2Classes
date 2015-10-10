@@ -16,13 +16,18 @@ public class CityscapeComponent extends JComponent
     private Building building;
     private Sun sun;
     private Road road;
+    private Bus bus;
+    private Grass grass;
+    private Moon moon;
     private int numfloors;
+    private String citytime;
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
-    public CityscapeComponent(int floors)
+    public CityscapeComponent(int floors,String time)
     {
         numfloors = floors;
+        citytime = time;
     }
     
     /**
@@ -36,22 +41,32 @@ public class CityscapeComponent extends JComponent
         
         // invoke the draw method on each object in your Cityscape
         // ...
-        
-        Road road = new Road();
-        
-        road.draw(g2);
-        
-        Building building = new Building(numfloors);
-        
-        building.draw(g2);
-        
-        Sun sun = new Sun();
-        
-        sun.draw(g2);
-        
        
         
+       Road road = new Road();
         
+       road.draw(g2);
+        
+       Building building = new Building(numfloors);
+        
+       building.draw(g2);
+       
+       Grass grass = new Grass();
+       
+       grass.draw(g2);
+        
+       Sun sun = new Sun(citytime);
+        
+       sun.draw(g2);
+          
+       Moon moon = new Moon(citytime);
+        
+       moon.draw(g2);
+        
+       Bus bus = new Bus();
+       
+       bus.draw(g2);
+       
     }
     
     /**
@@ -62,7 +77,7 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated
         // ...
-        
+        bus.drive();
         
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method

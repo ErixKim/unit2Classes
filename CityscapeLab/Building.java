@@ -47,14 +47,10 @@ public class Building
         g2.draw(body1);
         
         
-        int x = 0;
+        
         int y = 0;
         for(int i=1; i<50; i++){
-            g2.setColor(Color.green);
-            Rectangle2D.Double grass = new Rectangle2D.Double(x,530,10, 50);
-            g2.fill(grass);
-            g2.draw(grass);
-            x += 30;
+            
             y += 1;
             g2.setColor(Color.black);
             Rectangle2D.Double floorboundary = new Rectangle2D.Double(350,600 - (floors * 10) + (floors * y) , 145 , 3);
