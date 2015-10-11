@@ -3,18 +3,19 @@ import java.awt.geom.Ellipse2D;
 import java.awt.Color;
 
 /**
- * Write a description of class Moon here.
+ * Draws a moon object depending on whether the user wants it to be morning or night
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Eric Kim
+ * @version 10/10/15
  */
 public class Moon
 {
-    // instance variables - replace the example below with your own
-    public String time;
+    // instance variable time is user dependent and determines whether to draw moon or not
+    private String time;
 
     /**
      * Constructor for objects of class Moon
+     * @param time is user dependent
      */
     public Moon(String time)
     {
@@ -22,10 +23,9 @@ public class Moon
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Checks if the user answered n for time and draws the moon if the user did say n
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param  g2 the graphics content
      */
     public void draw(Graphics2D g2)
     {

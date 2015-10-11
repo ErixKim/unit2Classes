@@ -8,10 +8,10 @@ import java.awt.geom.Line2D;
 import java.awt.*;
 import javax.swing.*;
 /**
- * Write a description of class Bridge here.
+ * Draws a road for cars
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Eric Kim
+ * @version 10/10/15
  */
 public class Road
 {
@@ -27,15 +27,10 @@ public class Road
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
+     * Draws the road with a black and orange line
      *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
+   
+     * @param   g2 the graphics content
      */
     public void draw(Graphics2D g2)
     {

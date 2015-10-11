@@ -3,14 +3,14 @@ import java.awt.geom.Rectangle2D;
 import java.awt.Color;
 import java.awt.Rectangle;
 /**
- * Write a description of class Grass here.
+ * Creates grass on the ground
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Eric Kim
+ * @version 10/10/15
  */
 public class Grass
 {
-    // instance variables - replace the example below with your own
+    
     
 
     /**
@@ -22,10 +22,10 @@ public class Grass
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Uses a for loop to draw multiple grass objects on the ground
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param g2 the graphics content
+    
      */
     public void draw(Graphics2D g2)
     {

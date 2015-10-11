@@ -4,73 +4,42 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.Graphics2D;
 /**
- * Write a description of class Bus here.
+ * Draws two buses that move
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Eric Kim 
+ * @version 10/10/15
  */
 public class Bus
 {
     // instance variables - replace the example below with your own
-    
-
+    private int xLeft; //x cordinate of rectangle
+    private int yTop; // y cordinate of rectangle
+    private Rectangle bus; //instance variable of bus 1
+    private Rectangle bus2; //instance variable of bus 2
     /**
      * Constructor for objects of class Bus
+     * @param x the x coordinate of the rectangle object
+     * @param y the y coordinate of the rectangle object
      */
-    public Bus()
+    public Bus(int x, int y)
     {
-        
+        xLeft = x;
+        yTop = y;
+        this.bus = new Rectangle(xLeft , yTop , 2, 20); 
+        this.bus2 = new Rectangle(xLeft, yTop , 2 , 20);
     }
-
     /**
-     * An example of a method - replace this comment with your own
+     * Draws the two buses
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param  g2 the graphics content
      */
     public void draw(Graphics2D g2)
     {
         g2.setColor(Color.yellow);
-        g2.setStroke(new BasicStroke(10));
-        
-        int y1 = 30;
-        int y2 = 10;
-        for(int i=1; i<7; i++){
-            int x1 = 215;
-            int x2 = 215;
-            
-            g2.draw(new Line2D.Float(x1,y1,x2,y2));
-            y1 += 70;
-            y2 += 70;
-            x1 = 185;
-            x2 = 185;
-            g2.draw(new Line2D.Float(x1,y1,x2,y2));
-        }
-    
-    }
-    
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y
-     */
-    public void drive(Graphics2D g2)
-    {
-        g2.setColor(Color.yellow);
-        g2.setStroke(new BasicStroke(10));
-        int y1 = 32;
-        int y2 = 12;
-        for (int i=1; i<7; i++){
-            int x1 = 215;
-            int x2 = 215;
-            g2.draw(new Line2D.Float(x1,y1,x2,y2));
-            y1 += 2;
-            y2 += 2;
-            x1 = 185;
-            x2 = 185;
-            g2.draw(new Line2D.Float(x1,y1,x2,y2));
-        }
+        g2.fill(this.bus);
+        g2.draw(this.bus);
+        g2.fill(this.bus2);
+        g2.draw(this.bus2);
     }
 
 }
