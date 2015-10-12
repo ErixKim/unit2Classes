@@ -3,18 +3,20 @@ import java.awt.geom.Rectangle2D;
 import java.awt.Color;
 import java.awt.Rectangle;
 /**
- * Write a description of class Building here.
+ * Draws a building that varys on size depending on the user input for the number of floors
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Eric Kim
+ * @version 10/10/15
  */
 public class Building
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** description of instance variable floors (add comment for each instance variable) 
+    */
    
-    public int floors;
+    private int floors; //Gets the user input of the number of floors and changes the building size based off it
     /**
      * Default constructor for objects of class Building
+     * @param the number of floors the building has
      */
     public Building(int floors)
     {
@@ -25,19 +27,13 @@ public class Building
     
 
     /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
+     * Draws the building with the size based off of the number of floors it has
      *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
+     * @param   g2 the graphics content
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle2D.Double body = new Rectangle2D.Double(350,600 - (floors * 10),145, floors * 50);
+        Rectangle2D.Double body = new Rectangle2D.Double(350,600 - (floors * 10),145, floors * 10);
         g2.setColor(Color.lightGray);
         g2.fill(body);
         g2.draw(body);
@@ -47,21 +43,8 @@ public class Building
         g2.draw(body1);
         
         
-        int x = 0;
-        int y = 0;
-        for(int i=1; i<50; i++){
-            g2.setColor(Color.green);
-            Rectangle2D.Double grass = new Rectangle2D.Double(x,530,10, 50);
-            g2.fill(grass);
-            g2.draw(grass);
-            x += 30;
-            y += 1;
-            g2.setColor(Color.black);
-            Rectangle2D.Double floorboundary = new Rectangle2D.Double(350,600 - (floors * 10) + (floors * y) , 145 , 3);
-            g2.fill(floorboundary);
-            g2.draw(floorboundary);
-            
-        }
+        
+        
     }
 
     

@@ -11,7 +11,7 @@ public class CityscapeViewer
 {
     // the cityscape will be animated for 60 seconds
     static final int ANIMATION_TIME_IN_SECONDS = 60;
-   
+    
     /**
      * main method for the program which creates and configures the frame for the program
      *
@@ -31,9 +31,15 @@ public class CityscapeViewer
         System.out.print("How many floors is there to the building? ");
         int floors = s.nextInt();
         
+        System.out.print("Is it morning time (y/n)? ");
+        String time = s.next();
+        
+      
+        
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent(floors);
+        CityscapeComponent component = new CityscapeComponent(floors,time);
         frame.add(component);
+        
         
         // make the frame visible which will result in the paintComponent method being invoked on the
         //  component.
@@ -42,6 +48,7 @@ public class CityscapeViewer
         // animate the cityscape
         for( int seconds = 0; seconds < ANIMATION_TIME_IN_SECONDS; seconds++ )
         {
+            
             component.nextFrame();
             Thread.sleep( 1000 );
         }
